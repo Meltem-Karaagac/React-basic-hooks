@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const FunctionalComponent = () => {
   const [counter, setCounter] = useState(0);
 
-  console.log("Func Counter: ", counter);
+//   console.log("Func Counter: ", counter);
+
+useEffect(() => {
+    console.log("useEffect");
+    return () => {console.log("func comp unmount")}
+},[counter])
 
   const increase = () => {
       setCounter(counter+1)

@@ -1,18 +1,23 @@
 import React from 'react';
 
 class ClassComponent extends React.Component{
-    // constructor(){
-    //     super();
-    //     this.state = {
-    //         counter: 0
-    //     }
-    //     this.increase = this.increase.bind(this)
-    // }
-
-
     state = {
         counter: 0
     }
+
+
+    componentDidMount(){
+        console.log("ComponentDidMount");
+    }
+
+    componentDidUpdate(){
+        console.log("ComponentDidUpdate")
+    }
+
+    componentWillUnmount(){
+        console.log("componentWillUnmount")
+    }
+
 
     increase = () => {
         this.setState({counter: this.state.counter + 1})
@@ -20,7 +25,7 @@ class ClassComponent extends React.Component{
 
 
     render() {
-        console.log("Class Counter: ", this.state.counter)
+        // console.log("Class Counter: ", this.state.counter)
         return (
             <div className="class">
                 <h2>Class Component</h2>
