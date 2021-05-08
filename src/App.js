@@ -7,9 +7,9 @@ function App() {
   const [isVisible, setVisible] = useState(true);
   return (
     <div className="App">
-      <button onClick={() => setVisible(!isVisible)}>Toggle</button>
-      {true && <ClassComponent />}
-      {isVisible && <FunctionalComponent />}
+      {/* <button onClick={() => setVisible(!isVisible)}>Toggle</button> */}
+      {false && <ClassComponent />}
+      {isVisible ? <FunctionalComponent /> : null}
     </div>
   );
 }
